@@ -5,15 +5,15 @@ public class Mastermind {
     private char[] masterCode = new char[4];
 
     private CodeService _CodeService = new CodeService();
-    private UserService _UserService = new UserService();
+    private OutputService _OutputService = new OutputService();
 
     public static void main(String[] args) throws IOException {
         Mastermind m = new Mastermind();
         m.masterCode = m._CodeService.generiereCode();
-        m._UserService.einleitung();
+        m._OutputService.einleitung();
         System.out.println();
-        m._UserService.ergebnis(
-            m._UserService.rateVersuche(m.masterCode), 
+        m._OutputService.ergebnis(
+            m._OutputService.rateVersuche(m.masterCode), 
             m.masterCode
             );
     }

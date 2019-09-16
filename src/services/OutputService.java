@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 import enums.Colors;
 
-public class UserService {
+public class OutputService {
     private BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
 
     private CodeService _CodeService = new CodeService();
