@@ -7,7 +7,6 @@ import services.*;
 public class Mastermind {
     // Variablen welche über das ganze Programm benötigt werden
     private BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
-    private Colors mastermind_colors = new Colors();
     private char[] masterCode = new char[4];
     private char[] eingegebenerCode = new char[4];
 
@@ -35,8 +34,8 @@ public class Mastermind {
     private void einleitung() {
         System.out.println("Willkommen zu Mastermind. Erstellt von Ruben Nauer und Gion Rubitschung");
         System.out.println("Diese Farben stehen Ihnen zur Verfügung: ");
-        for (int i = 0; i < mastermind_colors.colors.length; i++) {
-            System.out.print(mastermind_colors.colors[i] + ": steht für " + mastermind_colors.colorsWritten[i]);
+        for (int i = 0; i < Colors.colors.length; i++) {
+            System.out.print(Colors.colors[i] + ": steht für " + Colors.colorsWritten[i]);
             System.out.println();
         }
         System.out.println(

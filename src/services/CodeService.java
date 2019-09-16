@@ -6,13 +6,12 @@ import java.util.Random;
 import enums.*;
 
 public class CodeService{
-    Colors mastermind_colors = new Colors();
 
     public char[] generiereCode(){
         char[] masterCode = new char[4];
 		for (int i = 0; i < masterCode.length; i++) {
 			int rnd = new Random().nextInt(6) + 1;
-			masterCode[i] = mastermind_colors.colors[rnd - 1];
+			masterCode[i] = Colors.colors[rnd - 1];
         }
         return masterCode;
     }
@@ -21,7 +20,7 @@ public class CodeService{
         boolean validStatus = false;
         if (code.length == code.length) {
             for (char c : code) {
-                boolean enthaelt = new String(mastermind_colors.colors).contains(String.valueOf(c));
+                boolean enthaelt = new String(Colors.colors).contains(String.valueOf(c));
                 if (!enthaelt) {
                     validStatus = false;
                     break;
