@@ -16,7 +16,7 @@ public class CodeService{
         }
         return masterCode;
     }
-    
+
     public boolean validiereEingabe(char[] code) {
         boolean validStatus = false;
         if (code.length == code.length) {
